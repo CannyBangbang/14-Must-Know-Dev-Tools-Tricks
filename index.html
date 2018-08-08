@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Console Tricks!</title>
+  <title>14 Must Know Dev Tools Tricks</title>
 </head>
 <body>
 
@@ -18,29 +18,64 @@
     }
 
     // Regular
+    console.log('Brock Rules!');
 
-    // Interpolated
+    // Interpolated - used "%s"
+    let King = 'Bob';
+    console.log('Hey, are you my brother %s!?!?', King);
 
-    // Styled
+    // Styled - used "%c"
+    console.log('%crandom text for random stuff', 'font-size: 30px; color: blue; background-color: pink;')
 
     // warning!
+    console.warn('something is broken!');
 
     // Error :|
+    console.error('What did you do!');
 
-    // Info
+    // Info - not working in chrome?!?!?
+    console.info('today is Wednesday');
 
     // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('banana'),  'That is wrong, no banana for you!');
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`); //can also used console.groupCollapsed to start with each group closed instead of open by default
+      console.log(`This dog is named ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} years old in dog years!`);
+      console.groupEnd(`${dog.name}`);
+    });
 
     // counting
+    console.count('how many times have i logged this?');
+    console.count('well what about this one?');
+    console.count('how many times have i logged this?');
+    console.count('how many times have i logged this?');
+    console.count('how many times have i logged this?');
+    console.count('well what about this one?');
+    console.count('well what about this one?');
 
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/cannybangbang')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
 
+    //table
+    console.table(dogs);
   </script>
 </body>
 </html>

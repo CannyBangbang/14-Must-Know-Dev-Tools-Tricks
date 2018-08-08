@@ -1,5 +1,5 @@
 # 14 Must Know Dev Tools Tricks
-Project completed for the 30 day vanilla JS coding challenge. Going over some tricks you can do in Chrome dev tools.
+Project completed for the 30 day vanilla JS coding challenge. Review of console methods.
 
 ## License
 This project is licensed under the Apache License - see the LICENSE file for details
